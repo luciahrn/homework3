@@ -8,7 +8,7 @@ public record Subscriber(String firstname,String lastname,SubscriberAddress full
         this(firstname, lastname, fullAddress, email, null);
     }
 
-    public boolean isUnderage() { //ak je vek nezadany nie je null
+    public boolean isUnderage() { //if age is null, subscriber is not underage
         if (this.age!=null && this.age<18) {
             return true;
         }
