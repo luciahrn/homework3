@@ -1,10 +1,5 @@
 package model;
-
-import model.Book;
-import model.Subscriber;
-
 import java.time.LocalDate;
-
 import static java.time.temporal.ChronoUnit.DAYS;
 
 public class Borrowing  {
@@ -36,7 +31,14 @@ public class Borrowing  {
     }
 
     public long numerOfDays() {
-        long daysBetween = DAYS.between(this.borrowDate, this.returnDate);
+        if (returnDate!=null) {
+            long daysBetween = DAYS.between(this.borrowDate, this.returnDate);
+            return daysBetween;
+        }
+        long daysBetween = DAYS.between(this.borrowDate, LocalDate.now());
         return daysBetween;
+
+
+
     }
 }

@@ -4,7 +4,6 @@ import model.ForeignBook;
 import model.ScientificBook;
 import model.Subscriber;
 import model.SubscriberAddress;
-
 import java.time.LocalDate;
 
 public class Main {
@@ -21,7 +20,7 @@ public class Main {
 
         SubscriberAddress johnCarrotAddress = new SubscriberAddress("Hlavna", 17, "Kosice", "Slovakia", 4001);
 
-        Subscriber johnCarrot = new Subscriber("John", "Carrot", johnCarrotAddress, "john.carrot@gmail.com");
+        Subscriber johnCarrot = new Subscriber("John", "Carrot", johnCarrotAddress, "john.carrot@gmail.com", 25);
 
 
 
@@ -39,5 +38,6 @@ public class Main {
 
         System.out.println(borrowing1.numerOfDays());
 
-        }
+
+    }
 }
